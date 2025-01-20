@@ -1,3 +1,3 @@
-require('config.lazy')
-require('config.harpoon')
-require('config.preferences')
+require("config.preferences")
+require("config.lazy")
+require("config.harpoon")

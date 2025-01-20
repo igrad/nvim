@@ -1,7 +1,7 @@
 return {
 	-- Main LSP Configuration
 	"neovim/nvim-lspconfig",
-	kazy = false,
+	lazy = false,
 	dependencies = {
 		-- Automatically install LSPs and related tools to stdpath for Neovim
 		-- Mason must be loaded before its dependents so we need to set it up here.
@@ -105,6 +105,8 @@ return {
 				--  For example, in C this would take you to the header.
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
+				map("<leader>cs", "<cmd>ClangdSwitchSourceHeader<cr>", "[S]witch source/header (C/C++)")
+
 				-- The following two autocommands are used to highlight references of the
 				-- word under your cursor when your cursor rests there for a little while.
 				--    See `:help CursorHold` for information about when this is executed
@@ -173,10 +175,7 @@ return {
 		--  - settings (table): Override the default settings passed when initializing the server.
 		--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 		local servers = {
-			clangd = {
-				-- CompilationDatabase = "/home/cpfk5ut/.config/nvim",
-				-- settings = { "I/opt/qt5-deere/lib", "I/workspace" },
-			},
+			clangd = {},
 			-- gopls = {},
 			-- pyright = {},
 			-- rust_analyzer = {},
