@@ -16,14 +16,14 @@ return {
 		-- Allows extra capabilities provided by nvim-cmp
 		"hrsh7th/cmp-nvim-lsp",
 
-		{ "ms-jpq/coq-nvim", branch = "coq" },
-		{ "ms-jpq/coq.artifacts", branch = "artifacts" },
-		{ "ms-jpq/coq.thirdparty", branch = "3p" },
+		-- { "ms-jpq/coq-nvim", branch = "coq" },
+		-- { "ms-jpq/coq.artifacts", branch = "artifacts" },
+		-- { "ms-jpq/coq.thirdparty", branch = "3p" },
 	},
 	init = function()
-		vim.g.coq_settings = {
-			auto_start = true,
-		}
+		-- vim.g.coq_settings = {
+		-- 	auto_start = true,
+		-- }
 	end,
 	config = function()
 		-- Brief aside: **What is LSP?**
