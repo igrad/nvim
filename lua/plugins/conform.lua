@@ -46,7 +46,7 @@ return { -- Autoformat
 				command = "clang-format",
 				append_args = function()
 					return {
-						"--style=file:/home/ian/projects/artificer/artificer-cpp-style.clang-format",
+						"--style=llvm",
 					}
 				end,
 			},
